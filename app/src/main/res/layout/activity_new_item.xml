@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="rtl"
+    tools:context=".NewItemActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/bar_"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layoutDirection="ltr">
+
+            <ImageView
+                android:id="@+id/arrow_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_back_black_24dp" />
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/signup_photo"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="5dp" />
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_marginTop="50dp"
+        android:layout_toStartOf="@+id/logo"
+        android:text="اسم المنتج :"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="29dp"
+        android:layout_toEndOf="@+id/nameText"
+        android:hint="اسم الباكدج"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/salary"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_alignStart="@+id/name"
+        android:layout_marginTop="24dp"
+        android:hint="سعر العرض"
+        android:inputType="number"
+        android:maxLength="4"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/read_num_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameText"
+        android:layout_alignStart="@+id/nameText"
+        android:layout_marginTop="40dp"
+        android:text="السعر  :"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/read_num_text"
+        android:layout_alignStart="@+id/read_num_text"
+        android:layout_marginLeft="39dp"
+        android:layout_marginTop="45dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="المواصفات"
+            android:inputType="text"
+            android:maxLength="60" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/description"
+        android:layout_alignStart="@+id/description"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="اضافه"
+        android:textColor="#fff"
+        android:textSize="20sp" />
+
+</RelativeLayout>
